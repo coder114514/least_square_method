@@ -61,6 +61,7 @@ Matrix inv(const Matrix& M)
 				break;
 			}
 		}
+		if (r > M.m) return Matrix(0, 0);
 		swap(W[r], W[i]);
 		for (int k = 1; k <= M.m; k++)
 		{
@@ -144,6 +145,11 @@ int main()
 		}
 	}
 	Matrix R = inv(M) * V;
+	if (R.n == 0)
+	{
+		cout << "unsolvable" << endl;
+		return -1;
+	}
 	vector<double> a;
 	for (int i = 1; i <= R.n; i++) a.push_back(R[i][1]);
 	cout << "y="; 
