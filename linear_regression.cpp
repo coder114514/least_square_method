@@ -52,11 +52,11 @@ int main() {
         sy  += y[i];
         sxy += x[i]*y[i];
         sx2 += x[i]*x[i];
-	}
+    }
     double k = (n*sxy-sx*sy) / (n*sx2-sx*sx);
     double b = sy/n - sx/n*k;
     double a[] = {b, k};
     cout << "y=";
     printPoly(1, a);
-	return 0;
+    return 0;
 }
