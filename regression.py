@@ -55,13 +55,13 @@ if __name__ == '__main__':
         line = input()
         x.append(int(line.split(' ')[0]))
         y.append(int(line.split(' ')[1]))
-    # round L / round a[i] = 0         i=0-(m-1)
-	# =>
-	# M[i][j] = sum k=1-n, pow(x[k],i+j-2)     i=1-m, j=1-m
-	# R[i][1] = a[i-1]                         i=1-m
-	# V[i][1] = sum j=1-n, pow(x[j],i-1)*y[j]    i=1-m
-	# M * R = V
-	# R = M^-1 * V
+    # round L / round a[i] = 0                 i=0-(m-1)
+    # =>
+    # M[i][j] = sum k=1-n, pow(x[k],i+j-2)     i=1-m, j=1-m
+    # R[i][1] = a[i-1]                         i=1-m
+    # V[i][1] = sum j=1-n, pow(x[j],i-1)*y[j]  i=1-m
+    # M * R = V
+    # R = M^-1 * V
     M = Matrix(m, m)
     V = Matrix(m, 1)
     for i in range(1, m+1):

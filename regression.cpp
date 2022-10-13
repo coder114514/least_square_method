@@ -128,11 +128,11 @@ int main() {
         x.push_back(_x);
         y.push_back(_y);
     }
-    // round L / round a[i] = 0         i=0-(m-1)
+    // round L / round a[i] = 0                 i=0-(m-1)
     // =>
     // M[i][j] = sum k=1-n, pow(x[k],i+j-2)     i=1-m, j=1-m
     // R[i][1] = a[i-1]                         i=1-m
-    // V[i][1] = sum j=1-n, pow(x[j],i-1)*y[j]    i=1-m
+    // V[i][1] = sum j=1-n, pow(x[j],i-1)*y[j]  i=1-m
     // M * R = V
     // R = M^-1 * V
     Matrix M(m, m);
