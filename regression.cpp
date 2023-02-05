@@ -6,7 +6,7 @@ int n, m;
 
 struct Matrix {
     int n, m;
-    vector<vector<double> > data;
+    vector<vector<double>> data;
     Matrix(int n, int m) : n(n), m(m) {
         data.resize(n+1);
         for (int i = 1; i <= n; i++) {

@@ -45,7 +45,7 @@ int main() {
     }
     double sx  = 0;
     double sy  = 0;
-    double sxy  = 0;
+    double sxy = 0;
     double sx2 = 0;
     for (int i = 1; i <= n; i++) {
         sx  += x[i];
